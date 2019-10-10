@@ -1,0 +1,7 @@
+C:\Users\Minh\source\repos\B3\B3\bin\Debug\B3.exe.config
+C:\Users\Minh\source\repos\B3\B3\bin\Debug\B3.exe
+C:\Users\Minh\source\repos\B3\B3\bin\Debug\B3.pdb
+C:\Users\Minh\source\repos\B3\B3\obj\Debug\B3.csprojAssemblyReference.cache
+C:\Users\Minh\source\repos\B3\B3\obj\Debug\B3.csproj.CoreCompileInputs.cache
+C:\Users\Minh\source\repos\B3\B3\obj\Debug\B3.exe
+C:\Users\Minh\source\repos\B3\B3\obj\Debug\B3.pdb
