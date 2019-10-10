@@ -4,11 +4,14 @@ namespace B3
 {
     class Square
     {
+        #region Propertion
         public Color Color { get; set; }
         public int X { get; set; }
         public int Y { get; set; }
         public int Width { get; set; }
         public int Height { get; set; }
+        #endregion
+        #region Processing function
         public Square(int _x,int _y,int _w, Color _c)
         {
             X = _x;
@@ -27,6 +30,6 @@ namespace B3
             X = _x;
             Y = _y;
         }
-
+        #endregion
     }
 }

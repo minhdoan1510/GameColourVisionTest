@@ -10,10 +10,9 @@ namespace B3
 {
     public class pnlGeneral:Panel
     {
-
+        #region Propertion
         static Panel pnlPicture;
         static Panel pnlDisplayResult;
-
         static Label lbTitle = new Label()
         {
             Text = "HỘP NÀO CÓ MÀU" + "\n" + "SẮC BẤT THƯỜNG ?",
@@ -30,55 +29,7 @@ namespace B3
             Image = Bitmap.FromFile(Application.StartupPath + @"\Picture\doctor.png")
         };
         #endregion
-
-        
-
-        public pnlGeneral()
-        {
-            LoadDisplay();
-        }
-
-        public void GameStart()
-        {
-            LbMistake_change.Text = "0";
-            LbResult_change.Text = "0";
-            LbTime.Text = "15";
-        }
-
-        void LoadDisplay()
-        {
-            this.Size = new Size(1000, 504);
-            this.BackColor = Color.AntiqueWhite;
-
-            pnlPicture = new Panel()
-            {
-                Location = new Point(0, 0),
-                Size = new Size(461, 504),
-                BackColor = Color.AntiqueWhite
-            };
-            pnlDisplayResult = new Panel()
-            {
-                Location = new Point(461 + 335, 0),
-                Size = new Size(200, 504),
-                BackColor = Color.AntiqueWhite
-
-            };
-
-            pnlDisplayResult.Controls.Add(lbMistake);
-            pnlDisplayResult.Controls.Add(lbMistake_change);
-            pnlDisplayResult.Controls.Add(lbResult);
-            pnlDisplayResult.Controls.Add(lbResult_change);
-            pnlDisplayResult.Controls.Add(lbTime);
-            pnlDisplayResult.Controls.Add(ptbVongTime);
-
-            pnlPicture.Controls.Add(ptbDoctor);
-            this.Controls.Add(pnlDisplayResult);
-            this.Controls.Add(pnlPicture);
-            this.Controls.Add(lbTitle);
-        }
-
         #region obj_pnlDisplayResult
-
         public static PictureBox ptbVongTime = new PictureBox()
         {
             Location = new Point(50, 10),
@@ -139,17 +90,59 @@ namespace B3
             get { return lbTime; }
             set { lbTime = value; }
         }
-
         public Label LbResult_change
         {
             get { return lbResult_change; }
             set { lbResult_change = value; }
         }
-
         public Label LbMistake_change
         {
             get { return lbMistake_change; }
             set { lbResult_change = value; }
+        }
+        #endregion
+        #endregion
+        #region Processing function
+        public pnlGeneral()
+        {
+            LoadDisplay();
+        }
+        public void GameStart()
+        {
+            LbMistake_change.Text = "0";
+            LbResult_change.Text = "0";
+            LbTime.Text = "15";
+        }
+        void LoadDisplay()
+        {
+            this.Size = new Size(1000, 504);
+            this.BackColor = Color.AntiqueWhite;
+
+            pnlPicture = new Panel()
+            {
+                Location = new Point(0, 0),
+                Size = new Size(461, 504),
+                BackColor = Color.AntiqueWhite
+            };
+            pnlDisplayResult = new Panel()
+            {
+                Location = new Point(461 + 335, 0),
+                Size = new Size(200, 504),
+                BackColor = Color.AntiqueWhite
+
+            };
+
+            pnlDisplayResult.Controls.Add(lbMistake);
+            pnlDisplayResult.Controls.Add(lbMistake_change);
+            pnlDisplayResult.Controls.Add(lbResult);
+            pnlDisplayResult.Controls.Add(lbResult_change);
+            pnlDisplayResult.Controls.Add(lbTime);
+            pnlDisplayResult.Controls.Add(ptbVongTime);
+
+            pnlPicture.Controls.Add(ptbDoctor);
+            this.Controls.Add(pnlDisplayResult);
+            this.Controls.Add(pnlPicture);
+            this.Controls.Add(lbTitle);
         }
         #endregion
     }
